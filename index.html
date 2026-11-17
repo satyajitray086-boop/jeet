@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Satyajit Ray</title>
+  <meta name="description" content="Personal portfolio showcasing profile, hobbies, and achievements.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-accent">&lt;</span><span id="logo-name">SR</span><span class="logo-accent">/&gt;</span>
+      </a>
+
+      <nav class="nav-links" id="nav-menu">
+        <a href="#about" class="nav-link"><i data-lucide="user"></i> About</a>
+        <a href="#hobbies" class="nav-link"><i data-lucide="sparkles"></i> Hobbies</a>
+        <a href="#achievements" class="nav-link"><i data-lucide="trophy"></i> Achievements</a>
+        <a href="#contact" class="nav-link"><i data-lucide="mail"></i> Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="icon-btn" title="Toggle theme" aria-label="Toggle theme">
+          <i data-lucide="sun" class="sun-icon"></i>
+          <i data-lucide="moon" class="moon-icon"></i>
+        </button>
+        <button id="quick-edit-btn" class="btn btn-secondary btn-sm" title="Customize details in browser">
+          <i data-lucide="sliders"></i> Customize
+        </button>
+        <button id="mobile-menu-btn" class="icon-btn mobile-only" aria-label="Open navigation menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="badge-pill">
+            <span class="badge-dot"></span>
+            <span>Welcome to my official portfolio</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text" id="display-hero-name">Satyajit Ray</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Passionate creator, thinker, and lifelong learner driven by curiosity, creativity, and purposeful building.
+          </p>
+
+          <!-- Core Attributes Quick Bar -->
+          <div class="hero-quick-stats">
+            <div class="stat-pill">
+              <i data-lucide="user-check"></i>
+              <div>
+                <span class="stat-label">Name</span>
+                <strong id="display-stat-name">Satyajit Ray</strong>
+              </div>
+            </div>
+
+            <div class="stat-pill">
+              <i data-lucide="calendar"></i>
+              <div>
+                <span class="stat-label">Age</span>
+                <strong id="display-stat-age">22 Years</strong>
+              </div>
+            </div>
+
+            <div class="stat-pill">
+              <i data-lucide="heart"></i>
+              <div>
+                <span class="stat-label">Core Passion</span>
+                <strong id="display-stat-passion">Tech & Creative Arts</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-cta-group">
+            <a href="#achievements" class="btn btn-primary">
+              <i data-lucide="award"></i> View Achievements
+            </a>
+            <a href="#hobbies" class="btn btn-glass">
+              <i data-lucide="compass"></i> Explore Hobbies
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="profile-card-wrapper">
+            <div class="profile-card">
+              <div class="avatar-container">
+                <div class="avatar-placeholder" id="avatar-initials">SR</div>
+                <div class="avatar-badge" title="Active & Ready to Connect">
+                  <i data-lucide="zap"></i>
+                </div>
+              </div>
+
+              <h2 class="profile-name" id="display-card-name">Satyajit Ray</h2>
+              <p class="profile-tagline" id="display-card-tagline">Explorer • Builder • Problem Solver</p>
+
+              <div class="profile-info-list">
+                <div class="info-row">
+                  <span class="info-label"><i data-lucide="user"></i> Full Name</span>
+                  <span class="info-value" id="display-info-fullname">Satyajit Ray</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label"><i data-lucide="hourglass"></i> Current Age</span>
+                  <span class="info-value"><span id="display-info-age">22</span> years old</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label"><i data-lucide="map-pin"></i> Location</span>
+                  <span class="info-value" id="display-info-location">India</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label"><i data-lucide="target"></i> Focus</span>
+                  <span class="info-value" id="display-info-focus">Innovation & Growth</span>
+                </div>
+              </div>
+
+              <div class="card-footer-chips">
+                <span class="mini-chip"><i data-lucide="code"></i> Development</span>
+                <span class="mini-chip"><i data-lucide="camera"></i> Photography</span>
+                <span class="mini-chip"><i data-lucide="book-open"></i> Reading</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Personal Profile</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-desc">Get to know the person behind the milestones, ideas, and ambitions.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card main-bio">
+            <div class="about-card-icon"><i data-lucide="smile"></i></div>
+            <h3>Who I Am</h3>
+            <p id="display-about-bio">
+              I am an energetic individual passionate about solving real-world problems and creating engaging experiences. 
+              Balancing continuous self-improvement with a genuine appreciation for arts, technology, and philosophy, 
+              I strive to bring dedication, originality, and resilience to everything I do.
+            </p>
+            <div class="bio-highlights">
+              <div class="highlight-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>Fast learner adaptable to diverse environments and emerging trends.</span>
+              </div>
+              <div class="highlight-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>Deep appreciation for multidisciplinary thinking and creative expression.</span>
+              </div>
+              <div class="highlight-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>Committed to personal accountability, curiosity, and teamwork.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-side-cards">
+            <div class="about-card metrics-card">
+              <div class="metrics-grid">
+                <div class="metric-box">
+                  <div class="metric-number" id="display-stat-metric-age">22</div>
+                  <div class="metric-name">Years of Age</div>
+                </div>
+                <div class="metric-box">
+                  <div class="metric-number">6+</div>
+                  <div class="metric-name">Active Hobbies</div>
+                </div>
+                <div class="metric-box">
+                  <div class="metric-number">10+</div>
+                  <div class="metric-name">Key Achievements</div>
+                </div>
+                <div class="metric-box">
+                  <div class="metric-number">100%</div>
+                  <div class="metric-name">Commitment</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-card values-card">
+              <h3>Guiding Principles</h3>
+              <ul class="principles-list">
+                <li><i data-lucide="compass"></i> <strong>Curiosity:</strong> Asking the right questions before seeking answers.</li>
+                <li><i data-lucide="shield-check"></i> <strong>Integrity:</strong> Upholding authenticity in word and deed.</li>
+                <li><i data-lucide="zap"></i> <strong>Progress:</strong> Incremental daily improvement over perfection.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section class="section hobbies-section" id="hobbies">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Passions & Interests</span>
+          <h2 class="section-title">My Hobbies</h2>
+          <p class="section-desc">What keeps me energized, creative, and inspired outside of everyday obligations.</p>
+        </div>
+
+        <!-- Filter Tags -->
+        <div class="filter-bar" id="hobby-filters">
+          <button class="filter-btn active" data-filter="all">All Hobbies</button>
+          <button class="filter-btn" data-filter="creative">Creative & Arts</button>
+          <button class="filter-btn" data-filter="intellectual">Intellectual & Tech</button>
+          <button class="filter-btn" data-filter="fitness">Fitness & Outdoor</button>
+        </div>
+
+        <!-- Hobbies Grid -->
+        <div class="hobbies-grid" id="hobbies-container">
+          <!-- Dynamically populated or rendered via JS & fallback static markup -->
+          <article class="hobby-card" data-category="intellectual">
+            <div class="hobby-icon-box">
+              <i data-lucide="code-2"></i>
+            </div>
+            <div class="hobby-tag">Intellectual & Tech</div>
+            <h3 class="hobby-title">Coding & Open Source</h3>
+            <p class="hobby-description">
+              Experimenting with modern tech stacks, building interactive tools, and contributing to open-source software solutions.
+            </p>
+            <div class="hobby-meta">
+              <span><i data-lucide="activity"></i> Daily practice</span>
+              <span><i data-lucide="cpu"></i> Full-Stack & UI</span>
+            </div>
+          </article>
+
+          <article class="hobby-card" data-category="creative">
+            <div class="hobby-icon-box">
+              <i data-lucide="camera"></i>
+            </div>
+            <div class="hobby-tag">Creative & Arts</div>
+            <h3 class="hobby-title">Visual Photography</h3>
+            <p class="hobby-description">
+              Capturing landscapes, street life, and geometry. Finding storytelling angles in everyday moments and natural light.
+            </p>
+            <div class="hobby-meta">
+              <span><i data-lucide="image"></i> Landscape & Street</span>
+              <span><i data-lucide="sun"></i> Natural Light</span>
+            </div>
+          </article>
+
+          <article class="hobby-card" data-category="intellectual">
+            <div class="hobby-icon-box">
+              <i data-lucide="book-marked"></i>
+            </div>
+            <div class="hobby-tag">Intellectual & Tech</div>
+            <h3 class="hobby-title">Deep Reading & Research</h3>
+            <p class="hobby-description">
+              Exploring non-fiction literature across cognitive science, history, biographies, and emerging technologies.
+            </p>
+            <div class="hobby-meta">
+              <span><i data-lucide="bookmark"></i> 20+ books/year</span>
+              <span><i data-lucide="coffee"></i> Mindful learning</span>
+            </div>
+          </article>
+
+          <article class="hobby-card" data-category="intellectual">
+            <div class="hobby-icon-box">
+              <i data-lucide="swords"></i>
+            </div>
+            <div class="hobby-tag">Intellectual & Tech</div>
+            <h3 class="hobby-title">Chess & Strategy Games</h3>
+            <p class="hobby-description">
+              Studying opening theories, positional tactics, and calculating endgame strategies to sharpen decision making.
+            </p>
+            <div class="hobby-meta">
+              <span><i data-lucide="trophy"></i> Rapid & Blitz</span>
+              <span><i data-lucide="crosshair"></i> Tactical Thinking</span>
+            </div>
+          </article>
+
+          <article class="hobby-card" data-category="fitness">
+            <div class="hobby-icon-box">
+              <i data-lucide="mountain"></i>
+            </div>
+            <div class="hobby-tag">Fitness & Outdoor</div>
+            <h3 class="hobby-title">Trekking & Hiking</h3>
+            <p class="hobby-description">
+              Connecting with nature, exploring scenic trails, and building endurance through mountain hiking expeditions.
+            </p>
+            <div class="hobby-meta">
+              <span><i data-lucide="map"></i> Nature Trails</span>
+              <span><i data-lucide="heart-pulse"></i> Endurance</span>
+            </div>
+          </article>
+
+          <article class="hobby-card" data-category="creative">
+            <div class="hobby-icon-box">
+              <i data-lucide="music"></i>
+            </div>
+            <div class="hobby-tag">Creative & Arts</div>
+            <h3 class="hobby-title">Acoustic Music & Audio</h3>
+            <p class="hobby-description">
+              Playing acoustic guitar and experimenting with lo-fi beats, soundscapes, and melodies for creative relaxation.
+            </p>
+            <div class="hobby-meta">
+              <span><i data-lucide="disc"></i> Acoustic & Lo-Fi</span>
+              <span><i data-lucide="headphones"></i> Sound Design</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="section achievements-section" id="achievements">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Milestones & Honors</span>
+          <h2 class="section-title">My Achievements</h2>
+          <p class="section-desc">A curated timeline of key accomplishments, recognitions, and competitive milestones.</p>
+        </div>
+
+        <!-- Filter Tabs for Achievements -->
+        <div class="filter-bar" id="achievement-filters">
+          <button class="filter-btn active" data-filter="all">All Achievements</button>
+          <button class="filter-btn" data-filter="academic">Academic & Certifications</button>
+          <button class="filter-btn" data-filter="competitions">Competitions & Hackathons</button>
+          <button class="filter-btn" data-filter="leadership">Projects & Leadership</button>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+
+          <div class="timeline-items" id="achievements-container">
+            <!-- Item 1 -->
+            <div class="timeline-item" data-category="competitions">
+              <div class="timeline-badge">
+                <i data-lucide="trophy"></i>
+              </div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <span class="achievement-tag tag-competitions">Competitions</span>
+                  <span class="achievement-date"><i data-lucide="calendar"></i> 2024</span>
+                </div>
+                <h3 class="achievement-title">1st Place Winner - State Level Innovation Hackathon</h3>
+                <p class="achievement-desc">
+                  Led a team of 4 to design and deploy an AI-driven accessibility web application within 36 hours. Awarded best overall project and highest technical execution.
+                </p>
+                <div class="achievement-footer">
+                  <span class="badge-mini"><i data-lucide="award"></i> Gold Medalist</span>
+                  <span class="badge-mini"><i data-lucide="users"></i> Team Lead</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="timeline-item" data-category="academic">
+              <div class="timeline-badge">
+                <i data-lucide="graduation-cap"></i>
+              </div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <span class="achievement-tag tag-academic">Academic</span>
+                  <span class="achievement-date"><i data-lucide="calendar"></i> 2023</span>
+                </div>
+                <h3 class="achievement-title">Academic Merit Scholar & Top 1% Rank</h3>
+                <p class="achievement-desc">
+                  Consistently recognized on the Dean’s Honor List with a high GPA. Awarded institutional scholarship for outstanding academic performance and peer tutoring.
+                </p>
+                <div class="achievement-footer">
+                  <span class="badge-mini"><i data-lucide="check"></i> 9.4/10 CGPA</span>
+                  <span class="badge-mini"><i data-lucide="star"></i> Dean's Honor</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="timeline-item" data-category="leadership">
+              <div class="timeline-badge">
+                <i data-lucide="flag"></i>
+              </div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <span class="achievement-tag tag-leadership">Projects & Leadership</span>
+                  <span class="achievement-date"><i data-lucide="calendar"></i> 2023 - 2024</span>
+                </div>
+                <h3 class="achievement-title">Founder & Lead Organizer of Tech Community</h3>
+                <p class="achievement-desc">
+                  Founded a community of 500+ student developers and tech enthusiasts. Conducted 12+ hands-on workshops, speaker sessions, and coding bootcamps.
+                </p>
+                <div class="achievement-footer">
+                  <span class="badge-mini"><i data-lucide="users"></i> 500+ Members</span>
+                  <span class="badge-mini"><i data-lucide="mic"></i> 12+ Workshops</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="timeline-item" data-category="academic">
+              <div class="timeline-badge">
+                <i data-lucide="file-check-2"></i>
+              </div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <span class="achievement-tag tag-academic">Certifications</span>
+                  <span class="achievement-date"><i data-lucide="calendar"></i> 2022</span>
+                </div>
+                <h3 class="achievement-title">Full-Stack Cloud Architecture Certification</h3>
+                <p class="achievement-desc">
+                  Completed advanced professional credential covering cloud architecture, distributed systems, resilient microservices, and database optimization.
+                </p>
+                <div class="achievement-footer">
+                  <span class="badge-mini"><i data-lucide="shield"></i> Verified Credential</span>
+                  <span class="badge-mini"><i data-lucide="cloud"></i> Cloud Solutions</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Connect Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Let's Connect</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-desc">Have a collaboration idea, question, or opportunity? Drop me a message below!</p>
+        </div>
+
+        <div class="contact-wrapper">
+          <!-- Left: Contact Details & Socials -->
+          <div class="contact-sidebar">
+            <div class="contact-status-card">
+              <div class="status-indicator">
+                <span class="status-dot"></span>
+                <span>Open for Opportunities & Collaborations</span>
+              </div>
+              <p class="status-text">
+                I am always excited to discuss new ideas, projects, or creative endeavors. I typically respond within 24 hours.
+              </p>
+            </div>
+
+            <div class="contact-methods">
+              <!-- Email Card with Copy Button -->
+              <div class="contact-method-item">
+                <div class="method-icon"><i data-lucide="mail"></i></div>
+                <div class="method-details">
+                  <span class="method-label">Email Address</span>
+                  <a href="mailto:satyajitray@example.com" class="method-value" id="contact-email-link">
+                    <span id="contact-email-text">satyajitray@example.com</span>
+                  </a>
+                </div>
+                <button type="button" class="copy-btn" id="copy-email-btn" title="Copy email address" aria-label="Copy email">
+                  <i data-lucide="copy" class="copy-icon"></i>
+                  <span class="copy-tooltip" id="copy-tooltip">Copy</span>
+                </button>
+              </div>
+
+              <!-- Location Card -->
+              <div class="contact-method-item">
+                <div class="method-icon"><i data-lucide="map-pin"></i></div>
+                <div class="method-details">
+                  <span class="method-label">Current Location</span>
+                  <span class="method-value" id="contact-location-text">India</span>
+                </div>
+              </div>
+
+              <!-- Response Time Card -->
+              <div class="contact-method-item">
+                <div class="method-icon"><i data-lucide="clock"></i></div>
+                <div class="method-details">
+                  <span class="method-label">Response Time</span>
+                  <span class="method-value">Within 24 Hours</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links-box">
+              <span class="social-title">Find Me Online</span>
+              <div class="social-buttons">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
+                  <i data-lucide="github"></i> <span>GitHub</span>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+                  <i data-lucide="linkedin"></i> <span>LinkedIn</span>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter">
+                  <i data-lucide="twitter"></i> <span>Twitter / X</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Contact Form -->
+          <div class="contact-form-container">
+            <form id="contact-form" class="interactive-form">
+              <h3 class="form-heading"><i data-lucide="send"></i> Send a Direct Message</h3>
+              <p class="form-subheading">Fill in this form and I will receive your message directly.</p>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name">Your Name <span class="required">*</span></label>
+                  <div class="input-with-icon">
+                    <i data-lucide="user"></i>
+                    <input type="text" id="contact-name" name="name" class="form-control" placeholder="e.g. Alex Johnson" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="contact-email">Your Email <span class="required">*</span></label>
+                  <div class="input-with-icon">
+                    <i data-lucide="at-sign"></i>
+                    <input type="email" id="contact-email" name="email" class="form-control" placeholder="e.g. alex@example.com" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Subject <span class="required">*</span></label>
+                <div class="input-with-icon">
+                  <i data-lucide="tag"></i>
+                  <input type="text" id="contact-subject" name="subject" class="form-control" placeholder="What would you like to talk about?" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Message <span class="required">*</span></label>
+                <div class="input-with-icon textarea-icon">
+                  <i data-lucide="message-square"></i>
+                  <textarea id="contact-message" name="message" class="form-control" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+              </div>
+
+              <!-- Status Alert Box -->
+              <div id="form-status-alert" class="form-status-alert" style="display: none;"></div>
+
+              <div class="form-submit-row">
+                <button type="submit" class="btn btn-primary btn-submit" id="submit-contact-btn">
+                  <i data-lucide="send" id="btn-icon"></i>
+                  <span id="btn-text">Send Message</span>
+                </button>
+                <button type="button" class="btn btn-glass btn-mailto" id="direct-mailto-btn" title="Open directly in your email app">
+                  <i data-lucide="external-link"></i> Open in Email App
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© <span id="current-year">2026</span> <strong id="display-footer-name">Satyajit Ray</strong>. Built with pride & modern web standards.</p>
+      <div class="footer-links">
+        <a href="#hero">Back to top <i data-lucide="arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick Edit Modal / Drawer to let user customize their data right in the browser! -->
+  <div class="modal-overlay" id="edit-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h3 class="modal-title">Live Portfolio Editor</h3>
+          <p class="modal-subtitle">Quickly edit your personal details and see instant live updates!</p>
+        </div>
+        <button class="icon-btn" id="close-modal-btn" aria-label="Close modal">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <form id="portfolio-edit-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="input-name">Full Name</label>
+              <input type="text" id="input-name" class="form-control" value="Satyajit Ray" placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+              <label for="input-age">Age</label>
+              <input type="number" id="input-age" class="form-control" value="22" min="1" max="120" placeholder="Enter your age">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="input-tagline">Tagline / Headline</label>
+              <input type="text" id="input-tagline" class="form-control" value="Explorer • Builder • Problem Solver">
+            </div>
+            <div class="form-group">
+              <label for="input-location">Location</label>
+              <input type="text" id="input-location" class="form-control" value="India">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="input-bio">About Me Summary</label>
+            <textarea id="input-bio" class="form-control" rows="3" placeholder="Brief summary about yourself..."></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="input-email">Contact Email</label>
+              <input type="email" id="input-email" class="form-control" value="satyajitray@example.com">
+            </div>
+            <div class="form-group">
+              <label for="input-web3key">Web3Forms Key <span style="font-size:0.75rem; color:var(--text-muted);">(Optional for direct email)</span></label>
+              <input type="text" id="input-web3key" class="form-control" placeholder="Get free from web3forms.com">
+            </div>
+          </div>
+
+          <div class="modal-actions">
+            <button type="submit" class="btn btn-primary">
+              <i data-lucide="save"></i> Save Changes
+            </button>
+            <button type="button" id="reset-defaults-btn" class="btn btn-glass">
+              <i data-lucide="rotate-ccw"></i> Reset Defaults
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
